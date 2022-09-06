@@ -18,6 +18,7 @@ body {
     background-image: url(../assets/images/signup.jpg);
     background-size: cover;
     background-position: 50% 50%;
+    z-index: 99999999999999;
   }
   
   .backLeft {
@@ -29,6 +30,7 @@ body {
     background-size: cover;
     background-image: url(../assets/images/login.jpg);
     background-position: 50% 50%;
+    z-index: 99999999999999;
   }
   
   #back {
@@ -55,7 +57,7 @@ body {
     left: -100%;
   }
   
-  .left {
+  #left {
     width: 50%;
     height: 100%;
     background: #2C3034;
@@ -63,7 +65,7 @@ body {
     position: absolute;
   }
   
-  .right {
+  #right {
     width: 50%;
     height: 100%;
     background: #f2eee3;
@@ -114,28 +116,7 @@ body {
     outline: 0;
     margin: 15px 15px 15px 0;
     transition: all 0.25s;
-  }
-  
-  button:hover {
-    background: #0288D1;
-    box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
-  }
-  .off {
-    background: none;
-    color: #03A9F4;
-    box-shadow: none;
-    margin-left: 16%;
-  }
-  
-  .right .off:hover {
-    background: #eee;
-    color: #03A9F4;
-    box-shadow: none;
-  }
-  .left .off:hover {
-    box-shadow: none;
-    color: #03A9F4;
-    background: #363A3D;
+    margin-left: 8%;
   }
   input {
     background: transparent;
@@ -152,3 +133,31 @@ body {
     justify-content: center;
     display:grid;
   }
+
+  #background{
+    background:none;
+    color:#0288D1 ;
+  }
+  #background:hover{
+    background: #0288D1;
+    color: white;
+    box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+  }
+  #button:hover{
+    color: white;
+    background: #0288D1;
+    box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+
+  }
+
+  .off{
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    z-index: 99999999999 !important;
+  }
+  .on{
+    display: block;
+    z-index: 99999999 !important;
+  }
+ 
